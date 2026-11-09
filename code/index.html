@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SafeGuard - Car Accident Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ Realistic iPhone 15 Hardware Mockup ============ -->
+<div class="mockup-wrapper">
+  <div class="iphone-device">
+    <!-- Physical Side Buttons -->
+    <div class="iphone-btn btn-action"></div>
+    <div class="iphone-btn btn-vol-up"></div>
+    <div class="iphone-btn btn-vol-down"></div>
+    <div class="iphone-btn btn-power"></div>
+
+    <!-- Phone Screen Display -->
+    <div class="phone" id="phone">
+
+      <!-- iOS 17 Status Bar & Dynamic Island -->
+      <div class="phone-top-bar">
+        <span class="status-time">9:41</span>
+        <div class="dynamic-island">
+          <div class="di-camera"></div>
+        </div>
+        <div class="status-icons">
+          <!-- 4 bars cellular signal -->
+          <svg class="s-ic" width="16" height="12" viewBox="0 0 17 12">
+            <rect x="0" y="8.5" width="3" height="3.5" rx="0.6"/>
+            <rect x="4.5" y="6" width="3" height="6" rx="0.6"/>
+            <rect x="9" y="3" width="3" height="9" rx="0.6"/>
+            <rect x="13.5" y="0.5" width="3" height="11.5" rx="0.6"/>
+          </svg>
+          <!-- Wifi -->
+          <svg class="s-ic" width="15" height="12" viewBox="0 0 16 12">
+            <path d="M8 9.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-4.2-3a5.9 5.9 0 0 1 8.4 0 .9.9 0 0 0 1.3-1.3 7.7 7.7 0 0 0-11 0 .9.9 0 0 0 1.3 1.3zm-2.8-2.9a9.9 9.9 0 0 1 14 0 .9.9 0 0 0 1.3-1.3 11.7 11.7 0 0 0-16.6 0 .9.9 0 0 0 1.3 1.3z"/>
+          </svg>
+          <!-- Battery icon with full charge -->
+          <svg class="s-ic" width="23" height="12" viewBox="0 0 24 12">
+            <rect x="0.5" y="0.5" width="20" height="11" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <rect x="2.5" y="2.5" width="14" height="7" rx="1.5"/>
+            <path d="M22 4.5v3c.6 0 1-.4 1-1v-1c0-.6-.4-1-1-1z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ============ Navigation Header ============ -->
+      <header class="head home" id="head">
+        <button class="ibtn" data-act="back" aria-label="Back"><i data-ic="arrowLeft"></i></button>
+        <div class="brand">
+          <svg viewBox="0 0 32 32">
+            <path d="M16 2 4 6v9c0 7.5 5 12.5 12 15 7-2.500 12-7.500 12-15V6z" fill="#2C365A"/>
+            <path d="M16 8 9.500 10.500v4.500c0 4 2.700 6.800 6.500 8.200V8z" fill="#F6F3EE"/>
+          </svg>
+          SafeGuard
+        </div>
+        <div class="head-mid"><small id="hStep">STEP 1 OF 6</small><b id="hTitle">Safety &amp; Triage</b></div>
+        <div class="portal-t"><small>CLIENT PORTAL</small><b>Claim #ALZ-894 &bull; Skoda Octavia</b></div>
+        <button class="me" data-toast="Profile is not part of this demo"><span class="avatar">E</span>Ema K.</button>
+        <button class="burger" data-toast="Menu is not part of this demo"><i data-ic="menu"></i></button>
+        <button class="ibtn" data-act="close" aria-label="Close"><i data-ic="x"></i></button>
+        <div class="portal-av"><i data-ic="user"></i></div>
+        <div class="progress"><i id="hBar"></i></div>
+      </header>
+
+      <!-- ============ 1. Portal home ============ -->
+      <section class="screen" id="s1">
+        <div class="scroll">
+          <div class="emergency reveal" style="--i:1;margin-top:4px">
+            <h2>Had an accident?</h2>
+            <p>Follow this guided digital report.</p>
+            <div class="veh-row">
+              <div class="ico-tile"><i data-ic="car"></i></div>
+              <div><b>Skoda Octavia &bull; BL-123AB</b><span>Active Policy</span></div>
+            </div>
+            <button class="btn primary" data-go="2">Report an Accident Now</button>
+            <button class="btn secondary" data-toast="Calling roadside assistance..."><i data-ic="phone"></i>Need a tow truck? Call Roadside</button>
+          </div>
+          <div class="eyebrow reveal" style="--i:2;margin:20px 2px 9px">My Insurance Portal</div>
+          <button class="card list-row reveal" style="--i:3" data-toast="Policies are not part of this demo">
+            <div class="ico-tile"><i data-ic="file"></i></div>
+            <div><b>My Active Policies</b><small>2 Active plans</small></div>
+            <i class="chev" data-ic="chevR"></i>
+          </button>
+          <button class="card list-row reveal" style="--i:4" data-toast="Payments are not part of this demo">
+            <div class="ico-tile"><i data-ic="receipt"></i></div>
+            <div><b>Recent Payments &amp; Invoices</b><small>Last paid Aug 12, 2023</small></div>
+            <i class="chev" data-ic="chevR"></i>
+          </button>
+          <button class="card list-row reveal" style="--i:5" data-toast="Documents are not part of this demo">
+            <div class="ico-tile"><i data-ic="idcard"></i></div>
+            <div><b>Green Card &amp; Documents</b><small>Digital ID cards available</small></div>
+            <i class="chev" data-ic="chevR"></i>
+          </button>
+          <div class="support reveal" style="--i:6">
+            <div class="row">
+              <div class="ico-tile"><i data-ic="headset"></i></div>
+              <div>
+                <b>Customer Support</b>
+                <div style="font-size:12px;color:var(--muted);margin-top:2px">Chat with our experts or find answers in our Help Center.</div>
+              </div>
+            </div>
+            <button data-toast="Help Center is not part of this demo">Visit Help Center <i data-ic="arrowRight"></i></button>
+          </div>
+        </div>
+        <nav class="tabbar">
+          <button class="on"><i data-ic="home"></i>Home</button>
+          <button data-toast="Not part of this demo"><i data-ic="car"></i>Policies</button>
+          <button data-toast="Not part of this demo"><i data-ic="card"></i>Billing</button>
+          <button data-toast="Not part of this demo"><i data-ic="user"></i>Profile</button>
+        </nav>
+      </section>
+
+      <!-- ============ 2. Safety & incident type ============ -->
+      <section class="screen" id="s2">
+        <div class="scroll">
+          <div class="companion" data-img="guy-waving" data-idle="wave" data-text="No worries, accidents happen. Make sure you're safe first, then tap what happened. This will only take 5 minutes. But before we start...."></div>
+          <div class="card safety reveal" style="--i:1">
+            <h4>Quick Safety Check</h4>
+            <div class="safe-icons">
+              <div><div class="ico-tile"><i data-ic="shirt"></i></div>Vest &amp; Hazards ON</div>
+              <div><div class="ico-tile"><i data-ic="warn"></i></div>Triangle (50-100m)</div>
+              <div><div class="ico-tile"><i data-ic="smile"></i></div>No Injuries</div>
+            </div>
+            <button class="sos" data-sheet="sheetSos"><i data-ic="phone"></i>Injuries or danger? Call 112 / 158</button>
+          </div>
+          <h3 class="h-sec reveal" style="--i:2;margin-top:20px">What kind of accident occurred?</h3>
+          <button class="card inc reveal" style="--i:3" data-inc="collision">
+            <div class="ico-tile"><i data-ic="car"></i></div>
+            <div><b>Collision with another vehicle</b><small>Standard two-car accident report</small></div>
+            <span class="tick"><i data-ic="check"></i></span>
+          </button>
+          <button class="card inc reveal" style="--i:4" data-inc="object">
+            <div class="ico-tile"><i data-ic="tree"></i></div>
+            <div><b>Hit an object, fence, or parked car</b><small>If owner is absent or public guardrails are damaged, we will prompt a 158 Police call</small></div>
+            <span class="tick"><i data-ic="check"></i></span>
+          </button>
+          <button class="card inc reveal" style="--i:5" data-inc="chain">
+            <div class="ico-tile"><i data-ic="crash"></i></div>
+            <div><b>Chain collision (3+ vehicles)</b><small>Multi-vehicle accident (Police assistance recommended)</small></div>
+            <span class="tick"><i data-ic="check"></i></span>
+          </button>
+        </div>
+        <div class="cta-bar"><button class="btn primary" data-gate="2" data-go="3">Continue</button></div>
+      </section>
+
+      <!-- ============ 3. Connect drivers ============ -->
+      <section class="screen" id="s3">
+        <div class="scroll">
+          <div class="companion rev" data-img="guy-two" data-idle="hop" data-wide="1" data-text="Show this screen to the other driver. Once they scan the code, you can both fill out your parts at the same time-no app download needed!"></div>
+          <div class="card qr-card reveal" style="--i:1">
+            <div class="claim-chip">SHARED CLAIM ID #ALZ-894</div>
+            <div class="qr-box" id="qrBox"></div>
+            <div class="pill wait" id="qrPill"><span class="spin"></span><span>Waiting for the other driver to connect...</span></div>
+            <button class="btn secondary" id="shareBtn"><i data-ic="link"></i>Or Share Link via SMS</button>
+          </div>
+          <div class="fallback reveal" style="--i:2">
+            <p>Other driver doesn't have a smartphone or prefers using yours?</p>
+            <button class="btn dashed" id="onePhone"><i data-ic="idcard"></i>Fill it out on one phone</button>
+            <small>You'll scan their license &amp; plate manually</small>
+          </div>
+        </div>
+        <div class="cta-bar"><button class="btn primary disabled" id="s3cta" data-gate="3" data-go="4">Start Filling Details <i data-ic="chevR"></i></button></div>
+      </section>
+
+      <!-- ============ 4. Location & time ============ -->
+      <section class="screen" id="s4">
+        <div class="scroll">
+          <div class="companion" data-img="guy-writing" data-idle="write" data-text="I've automatically filled in your car details, exact time, and GPS location."></div>
+          <div class="card reveal" style="--i:1">
+            <div class="mini-map">
+              <img class="m" src="assets/location.png" alt="Map">
+              <div class="pin-shadow"></div>
+              <div class="pin"><i data-ic="pinFill"></i></div>
+              <div class="live">LIVE GPS</div>
+            </div>
+            <div class="verified"><i data-ic="check"></i>Location &amp; Time Auto-Verified</div>
+            <div class="fact">
+              <div class="ico-tile"><i data-ic="pin"></i></div>
+              <div style="flex:1"><b id="addr">Bajkalska 29, 821 09 Bratislava</b><small>Bratislava II District</small></div>
+            </div>
+            <div class="fact">
+              <div class="ico-tile"><i data-ic="clock"></i></div>
+              <div><b>Today, 14:32</b><small>Central European Time (GMT+1)</small></div>
+            </div>
+            <button class="edit-link" id="editLoc">Edit location</button>
+          </div>
+          <div class="info reveal" style="--i:2;margin-top:14px">
+            <i data-ic="info"></i>
+            <div>If the details above are incorrect, you can adjust them in the next step or by tapping edit. Accurate data helps process your claim 40% faster.</div>
+          </div>
+        </div>
+        <div class="cta-bar"><button class="btn primary" data-go="5">Confirm My Details <i data-ic="chevR"></i></button></div>
+      </section>
+
+      <!-- ============ 5. Damage blueprint ============ -->
+      <section class="screen" id="s5">
+        <div class="scroll">
+          <div class="companion rev" data-img="guy-dizzy" data-idle="dizzy" data-text="Tap on the parts of <b><u>YOUR</u></b> car that were hit or scratched. No need to rotate anything-all sides are unfolded right here."></div>
+          <div class="card bp reveal" style="--i:1">
+            <div class="bp-grid" id="bpGrid"></div>
+            <div class="legend"><span><i class="d"></i>DAMAGED</span><span><i class="n"></i>INTACT</span></div>
+          </div>
+          <div class="sub-h reveal" style="--i:2">Specific or minor part damaged?</div>
+          <div class="sub-s reveal" style="--i:2">(e.g., mirror, light only, wheel)</div>
+          <div class="chips reveal" style="--i:3" id="partChips">
+            <button class="chip olive">Left Wing Mirror</button>
+            <button class="chip olive">Right Wing Mirror</button>
+            <button class="chip olive">Headlight Only</button>
+            <button class="chip olive">Wheel / Tire</button>
+          </div>
+          <label class="txt reveal" style="--i:4">
+            <i data-ic="edit"></i>
+            <input id="otherPart" placeholder="Specify other damaged part (optional)...">
+          </label>
+          <div class="info reveal" style="--i:5;margin-top:13px">
+            <i data-ic="camera"></i>
+            <div>Once selected, we'll guide you to take specific photos of these areas.</div>
+          </div>
+        </div>
+        <div class="cta-bar">
+          <div class="counter" id="dmgCount">0 damaged areas selected</div>
+          <button class="btn primary" data-gate="5" data-go="6">Continue to Guided Photos <i data-ic="chevR"></i></button>
+        </div>
+      </section>
+
+      <!-- ============ 6. Guided camera (Clean Viewfinder) ============ -->
+      <section class="screen" id="s6">
+        <div class="scroll">
+          <div class="companion" data-img="guy-photo" data-idle="snap" data-flash="1" data-text="Follow the outlines on the screen. Good photos prevent any disputes later!"></div>
+          <div class="cam reveal" style="--i:1" id="cam">
+            <video id="camVideo" playsinline muted autoplay class="hide-c"></video>
+            <div class="cam-photo-view" id="camPhotoView"></div>
+            <div class="prompt" id="camPrompt"></div>
+            <div class="shutter-row">
+              <button class="shutter" id="shutter" aria-label="Take photo"><i></i></button>
+            </div>
+            <div class="flashfx" id="camFlash"></div>
+          </div>
+          <div id="slots"></div>
+        </div>
+        <div class="cta-bar">
+          <button class="btn primary" id="s6cta" data-go="7">Save Photos &amp; Continue <i data-ic="chevR"></i></button>
+        </div>
+      </section>
+
+      <!-- ============ 7. Map scene (Using map.jpg) ============ -->
+      <section class="screen" id="s7">
+        <div class="scroll" id="s7scroll">
+          <div class="companion" data-img="guy-waving" data-idle="wave" data-text="Almost done! Drag the two cars onto the map to show where they met, then tap how they were moving."></div>
+          <div class="card mapcard reveal" style="--i:1">
+            <div class="map-vp" id="mapVp">
+              <div class="world" id="world">
+                <img class="mapimg" src="assets/map.jpg" alt="Road intersection" draggable="false">
+              </div>
+              <div class="map-empty" id="mapEmpty">
+                <span><i data-ic="move"></i>Drag the cars from below onto the map</span>
+              </div>
+              <div class="zoom">
+                <button id="zIn" aria-label="Zoom in"><i data-ic="plus"></i></button>
+                <button id="zOut" aria-label="Zoom out"><i data-ic="minus"></i></button>
+              </div>
+            </div>
+            <div class="map-foot">
+              <span><i data-ic="move"></i>DRAG TO REPOSITION</span>
+              <span>ROTATED: <b id="rotVal">0</b>&deg; <i data-ic="rotate"></i></span>
+            </div>
+          </div>
+          <div class="movers reveal" style="--i:2">
+            <div><h5>CAR A (MINE)</h5><div class="mslot empty" id="slotA"></div></div>
+            <div><h5>CAR B (OTHER)</h5><div class="mslot empty" id="slotB"></div></div>
+          </div>
+          <h3 class="h-sec reveal" style="--i:3;margin-top:18px;font-size:15px">Add road context tags:</h3>
+          <div class="chips reveal" style="--i:3" id="ctxChips">
+            <button class="chip">Intersection</button>
+            <button class="chip">Roundabout</button>
+            <button class="chip">Parking Lot</button>
+            <button class="chip">Changing Lanes</button>
+            <button class="chip">Yield Sign</button>
+          </div>
+          <h3 class="h-sec reveal" style="--i:4;margin-top:20px;font-size:15px">My Remarks (Optional):</h3>
+          <div class="chips reveal" style="--i:4" id="remChips">
+            <button class="chip" style="font-size:11px;letter-spacing:0.03em;border-radius:10px">I ACKNOWLEDGE FAULT</button>
+            <button class="chip" style="font-size:11px;letter-spacing:0.03em;border-radius:10px">DASHCAM FOOTAGE AVAILABLE</button>
+          </div>
+          <div class="remark reveal" style="--i:5">
+            <textarea id="remText" placeholder="Write a short remark..."></textarea>
+            <button class="mic" id="mic" aria-label="Voice note"><i data-ic="mic"></i></button>
+            <div style="height:32px"></div>
+          </div>
+          <div class="info reveal" style="--i:6;margin-top:13px">
+            <i data-ic="shield"></i>
+            <div>Your scene reconstruction will be reviewed by our claims specialist within the next 24 hours.</div>
+          </div>
+        </div>
+        <div class="cta-bar">
+          <button class="btn primary disabled" id="s7cta" data-gate="7">Send Scene to the other driver for Review <i data-ic="send"></i></button>
+        </div>
+      </section>
+
+      <!-- ============ 8. Mutual review ============ -->
+      <section class="screen" id="s8">
+        <div class="scroll">
+          <div class="companion" data-img="guy-writing" data-idle="write" data-text="Great teamwork! Both of you can see each other's inputs and remarks below. Confirm to lock the evidence, and you're free to leave the road safely."></div>
+          <div class="banner reveal" style="--i:1" id="banner">
+            <div class="bi"><span class="spin" style="border-color:rgba(255,255,255,0.35);border-top-color:#fff"></span><i data-ic="check" style="display:none"></i></div>
+            <span id="bannerTxt">Waiting for Jozef to review the map reconstruction...</span>
+          </div>
+          <div class="disagree reveal" style="--i:1"><i data-ic="info"></i>What if drivers disagree? <u id="protoLink">View Protocol</u></div>
+          <div class="card reveal" style="--i:2">
+            <div class="sum-map" id="sumMap">
+              <img class="m" src="assets/map.jpg" alt="Scene map">
+              <div class="cap">Map Data Captured</div>
+            </div>
+            <div class="sum-foot">
+              <div><b><i data-ic="pin"></i>Bajkalska 29, Bratislava</b><small>Today, 14:32</small></div>
+              <div class="photo-chip"><i data-ic="camera"></i>Verified Photos</div>
+            </div>
+          </div>
+          <div class="card vcard reveal" style="--i:3;margin-top:13px">
+            <div class="top"><span class="eyebrow">Vehicle A</span><span class="tag mine">YOUR INPUT</span></div>
+            <div class="person">
+              <div class="ico-tile car-dot" style="background:var(--peach)"><img src="assets/car-a.png" alt=""></div>
+              <div><b>Ema Kovacova</b><small>Skoda Octavia &bull; BL-123AB</small></div>
+            </div>
+            <div class="kv"><small>Visible Damage</small><b id="rvDamage">-</b></div>
+            <div class="kvr">
+              <div class="kv"><small>Movement</small><b id="rvMoveA">Not specified</b></div>
+              <div class="kv"><small>Lane Context</small><b>Main Road</b></div>
+            </div>
+            <div class="quote"><small>Ema's Remarks</small><span id="rvRemA">None</span></div>
+          </div>
+          <div class="card vcard reveal" style="--i:4;margin-top:13px">
+            <div class="top"><span class="eyebrow">Vehicle B</span><span class="tag other">COUNTERPART</span></div>
+            <div class="person">
+              <div class="ico-tile car-dot" style="background:var(--olive)"><img src="assets/car-b.png" alt=""></div>
+              <div><b>Jozef Chabron</b><small>Toyota RAV4 &bull; ZA-998XY</small></div>
+            </div>
+            <div class="kv"><small>Visible Damage</small><b>Right Rear Door, Rear Bumper</b></div>
+            <div class="kvr">
+              <div class="kv"><small>Movement</small><b id="rvMoveB">Not specified</b></div>
+              <div class="kv"><small>Lane Context</small><b>Side Road</b></div>
+            </div>
+            <div class="quote"><small>Jozef's Remarks</small>"Did not notice yield sign due to sun glare."</div>
+          </div>
+          <div class="info reveal" style="--i:5;margin-top:13px">
+            <i data-ic="info"></i>
+            <div>Confirming locks the factual on-scene evidence and sends an immutable digital copy to both phones via SMS. Formal liability is assessed by the insurer.</div>
+          </div>
+        </div>
+        <div class="cta-bar">
+          <button class="btn primary disabled" id="s8cta" data-gate="8" data-go="9"><i data-ic="check"></i>Confirm &amp; Finish On-Scene Part</button>
+        </div>
+      </section>
+
+      <!-- ============ 9. Tracker ============ -->
+      <section class="screen" id="s9">
+        <div class="scroll">
+          <div class="companion" id="comp9" data-img="guy-waving" data-idle="wave" data-text="Welcome home, <b>Ema</b>! Now that you're safe and calm, just pick your preferred repair shop and confirm your IBAN so that we can process your payout."></div>
+          <div class="card tracker reveal" style="--i:1">
+            <div class="eyebrow">Live Claim Tracker</div>
+            <div class="step done" id="st1">
+              <div class="dot"><i data-ic="check"></i></div>
+              <div><b>1. On-Scene Evidence Locked</b><small>Today, 14:39 &bull; GPS map, photos &amp; driver statements verified.</small></div>
+            </div>
+            <div class="step cur" id="st2">
+              <div class="dot"></div>
+              <div><b>2. Complete Home Admin Details</b><small id="st2s">Action Needed &bull; Takes 1 minute from home.</small></div>
+            </div>
+            <div class="step pend" id="st3">
+              <div class="dot"></div>
+              <div><b>3. Claim Review in Progress</b><small>Our team is reviewing your report &bull; Estimated within 24 hours.</small></div>
+            </div>
+            <div class="step pend" id="st4">
+              <div class="dot"></div>
+              <div><b>4. Repair Authorization &amp; Payout</b><small>Scheduled after claim approval.</small></div>
+            </div>
+          </div>
+          <div style="height:14px"></div>
+          
+          <button class="card task reveal" style="--i:2" id="shopBtn">
+            <div class="ico-tile"><i data-ic="wrench"></i></div>
+            <div style="flex:1">
+              <span class="req" id="shopReq">REQUIRED</span>
+              <b id="shopTitle">Select Authorized Repair Shop</b>
+              <small class="go" id="shopSub" style="color:var(--navy)">Tap to select partner garage <i data-ic="arrowRight"></i></small>
+            </div>
+          </button>
+
+          <div class="card task reveal" style="--i:3;cursor:default">
+            <div class="ico-tile"><i data-ic="card"></i></div>
+            <div>
+              <b>Payout Bank Account (IBAN)</b>
+              <small style="margin-top:3px;color:var(--navy)">SK89 1100 0000 0026 4910 4829</small>
+              <span class="confirmed" id="ibanOk"><i data-ic="check"></i>Confirmed</span>
+            </div>
+            <span class="prefill">PRE-FILLED</span>
+          </div>
+
+          <button class="card task reveal" style="--i:4" id="notesBtn">
+            <div class="ico-tile"><i data-ic="mic"></i></div>
+            <div><b>Additional Notes or Docs</b><small>Upload dashcam video, police report, or add a quiet voice note.</small></div>
+            <i data-ic="plus" style="margin-left:auto;font-size:17px;color:var(--muted)"></i>
+          </button>
+          <div class="notes-box" id="notesBox">
+            <div class="remark" style="margin-top:0"><textarea placeholder="Add a note for our claims specialist..."></textarea></div>
+          </div>
+        </div>
+        <div class="cta-bar">
+          <button class="btn primary disabled" id="submitFinal">Submit Final Claim Details</button>
+        </div>
+      </section>
+
+      <!-- ============ Modals, Sheets & Overlays (INSIDE the phone!) ============ -->
+      <div class="sheet-bg" id="sheetBg"></div>
+
+      <div class="sheet" id="sheetSos">
+        <div class="grab"></div>
+        <h3>Injuries or danger?</h3>
+        <p>Your safety comes first. Call the emergency services right away - we'll be here when you're ready to continue.</p>
+        <a class="btn primary" href="tel:112" style="text-decoration:none"><i data-ic="phone"></i>Call 112 - Emergency</a>
+        <a class="btn secondary" href="tel:158" style="text-decoration:none"><i data-ic="phone"></i>Call 158 - Police</a>
+        <button class="btn dashed" data-close>I'm safe, go back</button>
+      </div>
+
+      <div class="sheet" id="sheetProto">
+        <div class="grab"></div>
+        <h3>If drivers disagree</h3>
+        <p>Nobody gets stuck at the roadside. If the statements differ, either driver can tap <b>Submit my version</b>. Both versions are saved side by side and the insurer reviews them later.</p>
+        <button class="btn primary" data-close>Got it</button>
+      </div>
+
+      <div class="overlay-full" id="sending">
+        <div class="plane"><i data-ic="send" style="font-size:42px"></i></div>
+        <div>Sending the scene to Jozef...</div>
+      </div>
+
+      <div class="toast" id="toast"></div>
+
+      <!-- iOS Home indicator bar -->
+      <div class="home-indicator"></div>
+
+    </div> <!-- /.phone -->
+  </div> <!-- /.iphone-device -->
+</div> <!-- /.mockup-wrapper -->
+
+<script src="js/app.js"></script>
+</body>
+</html>
