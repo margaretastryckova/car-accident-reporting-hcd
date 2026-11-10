@@ -301,7 +301,7 @@ function initBlueprint() {
     z('fbumper', 2, 1) + z('fhood', 2, 2) + z('lfender', 1, 2) + z('rfender', 3, 2) +
     z('lfdoor', 1, 3) + z('rfdoor', 3, 3) + z('lrdoor', 1, 4) + z('rrdoor', 3, 4) +
     z('lquarter', 1, 5) + z('rquarter', 3, 5) + z('trunk', 2, 5) + z('rbumper', 2, 6) +
-    `<div class="roof"><svg viewBox="0 0 100 130" preserveAspectRatio="none"><path d="M18 14c0-8 10-10 32-10s32 2 32 10l4 30v50l-4 24c0 8-10 10-32 10s-32-2-32-10l-4-24V44z" fill="rgba(246,243,238,.9)" stroke="#2C365A" stroke-width="2.5"/><path d="M26 40h48l-4 14H30zM30 90h40l4 14H26z" fill="rgba(44,54,90,.15)" stroke="#2C365A" stroke-width="1.5"/></svg><span>ROOF</span></div>`;
+    `<div class="roof"><svg viewBox="0 0 100 150" preserveAspectRatio="none"><path d="M22 18 c0 -10 10 -12 28 -12 s28 2 28 12 l4 34 v54 l-4 28 c0 10 -10 12 -28 12 s-28 -2 -28 -12 l-4 -28 V52 z" fill="rgba(246,243,238,0.92)" stroke="#2C365A" stroke-width="2.2" stroke-linejoin="round"/><path d="M28 26 h44 l-4 14 H32 z" fill="rgba(44,54,90,0.18)" stroke="#2C365A" stroke-width="1.5" stroke-linejoin="round"/><path d="M32 112 h36 l4 14 H28 z" fill="rgba(44,54,90,0.18)" stroke="#2C365A" stroke-width="1.5" stroke-linejoin="round"/></svg><span>ROOF</span></div>`;
 
   g.addEventListener('click', e => {
     const b = e.target.closest('.zone');
@@ -386,22 +386,16 @@ function renderCam() {
   $('#s6cta').classList.remove('disabled');
 }
 
-async function startCamera() {
-  try {
-    stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: false });
-    const v = $('#camVideo');
-    v.srcObject = stream;
-    v.classList.remove('hide-c');
-    $('#camPhotoView').classList.add('hide-c');
-  } catch (e) {
-    $('#camVideo').classList.add('hide-c');
-    $('#camPhotoView').classList.remove('hide-c');
-  }
+function startCamera() {
+  // Real webcam permission request disabled as requested.
+  // Viewfinder cleanly uses high-res demo accident photos.
+  $('#camVideo').classList.add('hide-c');
+  $('#camPhotoView').classList.remove('hide-c');
 }
 
 function stopCamera() {
   if (stream) {
-    stream.getTracks().forEach(t => t.stop());
+    try { stream.getTracks().forEach(t => t.stop()); } catch (e) {}
     stream = null;
   }
 }
@@ -413,16 +407,8 @@ function takePhoto() {
   void f.offsetWidth;
   f.classList.add('go');
 
-  const v = $('#camVideo');
-  if (stream && v.videoWidth) {
-    const c = document.createElement('canvas');
-    c.width = 320;
-    c.height = 240;
-    c.getContext('2d').drawImage(v, 0, 0, 320, 240);
-    S.photos[s] = c.toDataURL('image/jpeg', 0.8);
-  } else {
-    S.photos[s] = PHOTO_ASSETS[s];
-  }
+  // Assign demo photo to current slot
+  S.photos[s] = PHOTO_ASSETS[s];
 
   // Advance to the next un-captured slot
   const next = [1, 2, 3, 0].map(o => (s + o) % 4).find(i => !S.photos[i]);
