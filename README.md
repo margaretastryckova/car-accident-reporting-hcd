@@ -14,3 +14,7 @@ figma-links.txt: links to figma files (user flow, map, and screen wireframes)
 personaema.png: user persona visual (driver ema)
 
 personafilip.png: insurance claims adjuster persona visual (filip)
+
+
+USAGE OF AI
+I used AI in this project for brainstorming, structuring my thoughts and research findings into a readable format, problem-solving during the discover and design phase, and providing HTML coding assistance.
